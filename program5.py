@@ -7,7 +7,7 @@ hisDetails = {'Health': 100}
 running = True
 
 while running == True:
-	print "You punch your enemy!"
+	print "You punch your enemy and he punches you back!"
 	
 	hisDetails['Health'] = hisDetails['Health'] - (randint(1, 10))
 	
