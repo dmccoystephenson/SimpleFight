@@ -7,22 +7,22 @@ hisDetails = {'Health': 100}
 running = True
 
 while running == True:
-	print "You punch your enemy and he punches you back!"
+	print("You punch your enemy and he punches you back!")
 	
 	hisDetails['Health'] = hisDetails['Health'] - (randint(1, 10))
 	
-	print "His health: %d" % hisDetails['Health']
+	print("His health: %d" % hisDetails['Health'])
 	
 	yourDetails['Health'] = yourDetails['Health'] - (randint(1, 10))
 	
-	print "Your health: %d" % yourDetails['Health']
+	print("Your health: %d" % yourDetails['Health'])
 	
-	print " "
+	print(" ")
 	
 	if yourDetails['Health'] < 1:
-		print "You died!"
+		print("You died!")
 		running = False
 	
 	elif hisDetails['Health'] < 1:
-		print "He died!"
+		print("He died!")
 		running = False
