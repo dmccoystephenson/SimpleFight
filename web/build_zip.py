@@ -2,10 +2,10 @@
 """Build the browser version of SimpleFight: web/index.html and web/game.zip.
 
 The game runs unmodified in the browser under tak's console runtime
-(https://github.com/Stephenson-Software/tak, tak.web.console): its prompts and
-output go to a terminal on the page, and any file it writes is kept in the
-browser. Needs tak installed (see .github/workflows/browser.yml). Serve the
-result cross-origin isolated, e.g. with arcade or tak.web.serve:
+(https://github.com/Stephenson-Software/tak, tak.web.console): its output goes
+to a terminal on the page. Needs tak installed (see
+.github/workflows/browser.yml). Serve the result cross-origin isolated, e.g.
+with arcade or tak.web.serve:
 
     python3 web/build_zip.py
     python3 -c "from tak.web.serve import main; main(root='.', title='SimpleFight')"
