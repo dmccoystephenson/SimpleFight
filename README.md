@@ -4,6 +4,8 @@
 
 A console fight: you and your enemy trade punches, each taking 1 to 10 damage a round, until one of you drops below 1 health. There is no input; every run is a new fight.
 
+<img src="screenshot.png" alt="One fight in a terminal: rounds of punches until &quot;You died!&quot;" width="300">
+
 Written by Daniel McCoy Stephenson in December 2016, as one of his first programs. It is part of the "First Programs" collection on [danielstephenson.dev/play](https://danielstephenson.dev/play).
 
 ## Running it
