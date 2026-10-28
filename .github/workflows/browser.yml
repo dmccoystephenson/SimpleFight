@@ -2,8 +2,9 @@
 # (https://github.com/Stephenson-Software/arcade, RFC 0006), where it is served at
 # https://simplefight.play.danielstephenson.dev.
 #
-# Every pull request runs one fight and builds the bundle. A push to master deploys it once the
-# org variable ARCADE_ENABLED is 'true' (or by hand: Actions -> Run workflow).
+# Every pull request runs one fight and builds the bundle. A push to master
+# deploys it once the org variable ARCADE_ENABLED is 'true' (or by hand:
+# Actions -> Run workflow).
 # Each deploy is version.txt plus the commit, so every push is a new, immutable
 # arcade version; rollback is arcade's POST /api/games/simplefight/current.
 name: Browser build
