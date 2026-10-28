@@ -2,8 +2,9 @@
 # (https://github.com/Stephenson-Software/arcade, RFC 0006), where it is served at
 # https://simplefight.play.danielstephenson.dev.
 #
-# Every pull request builds the bundle. A push to master deploys it once the
-# org variable ARCADE_ENABLED is 'true' (or by hand: Actions -> Run workflow).
+# Every pull request runs one fight and builds the bundle. A push to master
+# deploys it once the org variable ARCADE_ENABLED is 'true' (or by hand:
+# Actions -> Run workflow).
 # Each deploy is version.txt plus the commit, so every push is a new, immutable
 # arcade version; rollback is arcade's POST /api/games/simplefight/current.
 name: Browser build
@@ -25,6 +26,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: The program runs to the end of a fight
+        run: |
+          timeout 60 python3 program5.py > fight.txt
+          tail -n 1 fight.txt | grep -Ex "You died!|He died!"
       - name: Install tak (bundle builder + console runtime)
         run: pip install "tak @ git+https://github.com/Stephenson-Software/tak@9b539d8760e2c02cc262a7dcff6d0c541572ab71"
       - name: Build the browser bundle
